@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Monda:400,700&display=swap&subset=latin-ext');
+
+body
+{
+	background-color: #13171D;
+	margin: 0 auto;
+	font-family: Monda;
+	color: #E3E0F2;
+}
+
+nav
+{
+	background-color: #000000;
+}
+
+#menuAfbeelding
+{
+	max-width: 100%;
+	height: 70px;
+	margin-top: 10%;
+}
+
+#logo
+{
+	max-width: 100%;
+	height: 100px;	
+	margin-left: 16%;
+}
+
+#zoekicon
+{
+    display: none;
+}
+#vraagteken
+{
+	display: none;
+}
+ul
+{
+	margin: 0 auto;
+	display: flex;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	list-style-type: none;
+}
+h1
+{
+	font-size: 2.5em;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: -40px;
+}
+h2
+{
+	color: #C2C1C9;
+	text-align: center;
+	font-size: 1.9em;
+} 
+
+.mainChart
+{
+	background: rgb(40,46,54);
+	background: linear-gradient(180deg, rgba(40,46,54,1) 0%, rgba(46,50,56,0.4) 50%, rgba(81,90,104,0.2) 100%);
+	mix-blend-mode: normal;
+	border-radius: 25px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	margin: 50px 25px;
+	height: 730px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.titleChart
+{
+	margin-top: 15px;
+}
+#speed
+{
+	padding-bottom: 60px;
+}
+
+#visible-1
+{
+	display: none;
+}
+#zoekbalk
+{
+	display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+
+body{
+	background-color:red;
+}
+}
+
+@media only screen and  (min-width: 1025px){
+
+
+body{
+	background-color:blue;
+}
+}
+
+/*
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	body{
+		background-color: blue;
+	}
+
+	}*/
+
+
+	/*@media (min-width: 1000px)
+	{
+	
+		#menuAfbeelding
+		{
+			display: none;
+		}
+		#logo
+		{
+			max-width: 125%;
+			height: 70px;	
+			margin-left: 20%;
+			position: relative;
+			top: -12px;
+
+		}
+		#zoekicon
+		{
+		    display: inline;
+		    max-width: 15%;
+		    position: relative;
+		    left: 83%;
+
+		}
+
+		#vraagteken
+		{
+			display: inline;
+			max-width: 44%;
+			padding-top: 15px;
+		}
+		#zoekbalk
+		{
+			display: inline;
+		    width: 345px;
+		    height: 30px;
+		    position: relative;
+		    left: 42%;
+		    margin-top: 12px;
+		    border-radius: 6px;
+		    border-color: #FFFFFF;
+		}
+		nav
+		{
+			height: 115px;
+		}
+
+		#visible-1
+		{
+			display: block;
+			margin-top: -30px;
+			background-color: black;
+	 	 	width: 9%;
+  	 		margin-left: 0%;
+		}
+
+		#visible-1 img
+		{
+			width: 50px;
+		}
+		.lijn
+		{
+			margin-left: -40%;
+			border: 1px solid white;
+		}
+		.paddingNav
+		{
+			padding-top: 20px;
+			
+		}
+		#visible-1 li a
+		{
+			text-align: center;
+			font-size: 0.7em;
+			color: #E3E0F2;
+			text-decoration: none;
+			
+		}
+		.textNav
+		{
+			padding-bottom: 10px;
+		}
+		#homeText
+		{
+			margin-left: 8%;
+		}
+		#infoText
+		{
+			margin-left: -27%;
+		}
+		#surrInfo
+		{
+			margin-left: -30%;
+		}
+		#foodText
+		{
+			margin-left: -4%;
+		}
+		#toolsText
+		{
+			margin-left: 10%; 
+		} 
+
+
+		#containerItems
+		{
+			display: grid;
+			margin: 0 auto;
+			grid-template-columns: 20% 40% 40%;
+			grid-template-rows: auto;  
+		}
+	}	
+
+*/

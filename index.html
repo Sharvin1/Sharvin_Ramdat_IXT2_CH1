@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Space-X</title>
+	<meta charset="utf-8"/>
+	<link href= "css/challenge1.css" type= "text/css" rel= "stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+	<script type= "text/javascript">
+
+
+
+
+			
+			Chart.defaults.global.defaultFontFamily = 'Monda';
+			Chart.defaults.global.defaultFontSize =  25;
+			Chart.defaults.global.defaultFontColor = '#AEFEC4';
+
+			function vehicleSpeedChart(){
+				var lineChart = document.getElementById('lineChart')
+				let vehicleSpeedChart = new Chart(lineChart, {
+
+					type: 'line',
+					data: {
+						labels: ['2030', '2031', '2032', '2033', '2034'],
+						datasets: [{
+							label: 'Vehicle speed',
+							data: [0, 2300, 2956, 4000, 4698],
+
+							backgroundColor: [
+								'rgba(174, 254, 196, 0.2)'
+							],
+
+							borderColor: [
+								'rgba(174, 254, 196, 1)'	
+							],
+
+							borderWidth: 2,
+							lineTension: 0
+						}]
+					},
+					options: {
+						plugins: {
+							1: false
+						},						
+						title: {
+							display: false
+						},
+						legend:{
+							display: false
+						},
+						scales: {
+	        				yAxes: [{
+					            ticks: {
+					                max: 5000,
+					                min: 0,
+					                stepSize: 1000
+					            }
+					    	}]   
+						}    
+					}
+				})
+			}	
+
+			function geforceBarChart() {
+				var barChart = document.getElementById('barChart').getContext('2d');
+				let geforceChart = new Chart(barChart, {
+
+					type: 'bar', //bar, horizontalBar, pie, line, doughnut, radar, 	polarArea
+					data: {
+						labels: ['2030', '2031', '2032', '2033', '2034'],
+						datasets: [{
+							label: 'Geforce',
+							data: [13, 17, 11, 20, 8, 5],
+
+							backgroundColor:[
+							    'rgba(80, 38, 167, 0.2)',
+				                'rgba(141, 68, 139, 0.2)',
+				                'rgba(204, 106, 135, 0.2)',
+				                'rgba(236, 205, 143, 0.2)',
+				                'rgba(143, 236, 219, 0.2)'
+							],
+							borderColor:[
+							    'rgba(80, 38, 167, 1)',
+				                'rgba(141, 68, 139, 1)',
+				                'rgba(204, 106, 135, 1)',
+				                'rgba(236, 205, 143, 1)',
+				                'rgba(143, 236, 219, 1)'
+							],
+							borderWidth: 3,
+							hoverBorderWidth: 4,
+							hoverBorderColor: 'black'
+						}]
+					},
+
+					options: {
+						plugins: {
+							1: false
+						},
+						title: {
+							display: false
+						},
+						legend:{
+							display: false
+						},
+						scales: {
+	        				yAxes: [{
+					            ticks: {
+					                max: 20,
+					                min: 0,
+					                stepSize: 5
+					            }
+					    	}]   
+						}    
+					}
+
+
+					
+
+				});
+			}
+
+			function speedMeterDoughnutChart() {
+				var speedMeterChart = document.getElementById('speedMeterChart').getContext('2d');
+
+				var speedMeter = new Chart (speedMeterChart, {
+
+					type: 'doughnut', //bar, horizontalBar, pie, line, doughnut, radar, 	polarArea
+					data: {
+						labels: ['Speed'],
+						
+						datasets: [{
+							label: 'Vehicle speed',
+							data: [56000],
+							backgroundColor: [
+							    'rgba(174, 254, 196, 1)'
+							]
+						}]
+					},
+					options: {
+						circumference: 1.5 * Math.PI,
+						rotation: -1 * Math.PI,
+						cutoutPercentage: 90,
+
+						legend:{
+							display: false
+						}	
+						
+					}
+
+				});
+				Chart.pluginService.register({
+					id: "1",
+ 				 beforeDraw: function(chart) {
+
+			    	var width = chart.chart.width,
+			      	  height = chart.chart.height,
+			      	  ctx = chart.chart.ctx;
+
+				    ctx.restore();
+				    var fontSize = (height / 114).toFixed(2);
+				    ctx.font = fontSize + "em Monda";
+				    ctx.textBaseline = "middle";
+				    ctx.fillStyle = "#E3E0F2";
+
+				    var text = "65 300KM/h",
+				        textX = Math.round((width - ctx.measureText(text).width) / 2),
+				        textY = height / 2;
+
+				    ctx.fillText(text, textX, textY);
+				    ctx.save();
+				  }
+				});
+	
+			}
+
+
+			function accelerationChart(){
+				var lineAccelerationChart = document.getElementById('accelerationLineChart')
+				let vehicleSpeedChart = new Chart(lineAccelerationChart, {
+
+					type: 'line',
+					data: {
+						labels: ['0', '1', '2', '3', '4'],
+						datasets: [{
+							label: 'Acceleration within 4 seconds',
+							data: [0, 18000, 27000, 33000, 38000],
+
+							borderColor: [
+								'rgba(174, 254, 196, 1)'	
+							],
+
+							borderWidth: 3,
+	
+						}]
+					},
+					options: {
+						plugins: {
+							1: false
+						},						
+						title: {
+							display: true
+						},
+						legend:{
+							display: false
+						},
+						scales: {
+	        				yAxes: [{
+					            ticks: {
+					                max: 40000,
+					                min: 0,
+					                stepSize: 10000
+				            }
+					    	}]   
+						}    
+					}
+				})
+			}				
+
+
+
+
+		window.onload = function(){
+			geforceBarChart();
+			vehicleSpeedChart();
+			speedMeterDoughnutChart();
+			accelerationChart();
+
+		}
+
+	</script> -->
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href= "#"><img id= "menuAfbeelding"src= "images/menu.png" /></a></li>
+				<li><img id= "logo" src= "images/logo.png" /></li>
+				<input id= "zoekbalk" type= "text" placeholder= "Zoekopdracht.." /></li>
+				<li><a href= "#"><img id= "zoekicon"src= "images/zoekbalk.png" /></a></li>
+				<li><a href= "#"><img id= "vraagteken"src= "images/questionmark.png" /></a></li>				
+			</ul> 
+
+		</nav>
+	</header>
+
+		<div id= "containerItems">	
+			<div id= "containerSideNav">
+				<ul id= "visible-1">
+					<li class= "lijn"></li>
+					<li class= "paddingNav"><a href= "#"><img id= "homeBTN" src= "images/homeButton.png"  /></a></li>
+			
+					<li class= "textNav"><a id= "homeText" href= "# ">Home</a></li>
+					<li class= "lijn"></li>
+					<li class= "paddingNav"><a href= "#"><img id= "vehicleInfoBTN" src= "images/vehicle info.png"  /></a></li>
+					<li class= "textNav"><a id= "infoText"href= "# ">Vehicle information</a></li>
+					<li class= "lijn"></li>
+					<li class= "paddingNav"><a href= "#"><img id= "vehicleSurrBTN" src= "images/vehicleSurr.png"  /></a></li>
+		
+					<li class= "textNav"><a id = "surrInfo" href= "# ">Vehicle surrounding</a></li>
+					<li class= "lijn"></li>
+					<li class= "paddingNav"><a href= "#"><img id= "foodBTN" src= "images/food.png"  /></a></li>
+
+					<li class= "textNav"><a id= "foodText" href= "# ">Food stock</a></li>
+					<li class= "lijn"></li>
+					<li class= "paddingNav"><a href= "#"><img id= "toolBTN" src= "images/tools.png"  /></a></li>
+
+					<li class= "textNav"><a id= "toolsText" href= "# ">Tools</a></li>
+					<li class= "lijn"></li>
+				</ul>
+			</div>
+
+			<div id= "containerText">
+				<h1>Vehicle information</h1>
+				<h2>See below all our vehicle information</h2>
+			</div>
+
+
+				<article class= "mainChart">
+					<h1 class= "titleChart">Vehicle speed</h1>
+					<h2 class= "subtitleChart">Fuel usage each year</h2>
+					<canvas id="lineChart" class= "gradientColor" width="320" height="215"></canvas>
+				</article>
+
+				<article class= "mainChart">
+					<h1 class= "titleChart">Geforce</h1>
+					<h2 class= "subtitleChart">Geforce around the vehicle</h2>
+					<canvas id="barChart" class= "gradientColor" width="320" height="215"></canvas>
+				</article>
+				
+				<article id= "speed" class= "mainChart">	
+						<h1 class= "titleChart">Speed</h1>
+						<h2 class= "subtitleChart">Current speed</h2>
+						<canvas id="speedMeterChart" class= "gradientColor" width="320" height="215"></canvas>     <!--de hoogte en breedte aanpassen-->
+				</article>
+
+				<article id= "acceleration" class= "mainChart">
+					
+						<h1 class= "titleChart">Acceleration</h1>
+						<h2 class= "subtitleChart">Acceleration within 4 seconds</h2>
+						<canvas id="accelerationLineChart" class= "gradientColor" width="320" height="215"></canvas>	
+				</article>
+
+
+		</div>
+
+</body>
+
+</html>
